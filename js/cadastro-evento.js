@@ -1,12 +1,13 @@
+const BASE_URL = "https://xp41-soundgarden-api.herokuapp.com";
+
 const inputNome = document.querySelector("#nome");
 const inputDescricao = document.querySelector("#descricao");
 const inputAtracoes = document.querySelector("#atracoes");
 const inputData = document.querySelector("#data");
 const inputLotacao = document.querySelector("#lotacao");
 const inputImagem = document.querySelector("#poster");
-const BASE_URL = "https://xp41-soundgarden-api.herokuapp.com";
+
 const form = document.querySelector("form");
-const loading = document.querySelector("#loading");
 
 
 form.onsubmit = async (evento) => {
@@ -16,16 +17,15 @@ form.onsubmit = async (evento) => {
 
   const strAtracoes = inputAtracoes.value.split(',');
   const fullDateTime = convertDateTime(inputData.value);
-  const imageURL = checkImgUrl(inputImagem.value);
 
 
     const newEvent = {
       name: inputNome.value,
-      poster: imageURL,
+      poster: inputImagem.value,
       attractions: strAtracoes,
       description: inputDescricao.value,
       scheduled: fullDateTime.toISOString(),
-      number_tickets: inputLotacao.value
+      number_tickets: parseInt(inputLotacao.value)
     };
 
     
@@ -39,26 +39,16 @@ form.onsubmit = async (evento) => {
 
     const resposta = await fetch(`${BASE_URL}/events`, options);
     const conteudoResposta = await resposta.json();
+    alert('Evento cadastrado com sucesso!')
     form.reset();
   
   } catch (error) {
-  alert('error!');
+    alert('Erro inesperado');
   }
 }
 
     function convertDateTime(dateTime) {
       const [day, month, yearTime] = dateTime.split('/');
-      let convertDate = [month, day, yearTime].join('/');
-      convertDate = new Date(convertDate);
+      const convertDate = new Date([month, day, yearTime]);
       return convertDate;
-    }
-
-    function checkImgUrl (url) {
-      const imageExt = url.substring(url.lastIndexOf('.')+1);
-      if (imageExt !== 'jpeg' && imageExt !== 'jpg' && imageExt !== 'png') {
-        url = 'img/blank.png';
-        return url;    
-      } else {
-        return url;
-      }
     }

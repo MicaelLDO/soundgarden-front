@@ -40,8 +40,9 @@ function eventsArticles(events) {
 
     for (let i = 0; i < 3; i++) {
         let eventoData = new Date(events[i].scheduled).toLocaleString('pt-BR', dateOptions);
-        console.log(eventoData);
-        getArticles[i].querySelector('h2').innerText = `${events[i].name} - ${eventoData}`;
+
+        getArticles[i].querySelector('h2').innerText = `${events[i].name}`;
+        getArticles[i].querySelector('h3').innerText = `${eventoData}`;
         getArticles[i].querySelector('h4').innerText = `${events[i].attractions}`;
         getArticles[i].querySelector('p').innerText = `${events[i].description}`;
         getArticles[i].querySelector('a').href = `#modal?id=${events[i]._id}`;
@@ -73,10 +74,11 @@ form.onsubmit = async function(evento) {
         const resposta = await fetch(`https://xp41-soundgarden-api.herokuapp.com/bookings`, options);
         const conteudoResposta = await resposta.json();
         console.log(conteudoResposta);
+        alert('Reserva efetuada!')
         form.reset();
       
       } catch (error) {
-      alert('error!');
+      alert('Ocorreu um erro inesperado.');
       }
 }
 

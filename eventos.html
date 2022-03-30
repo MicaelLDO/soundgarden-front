@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modal.css">
 </head>
 
 <body>
@@ -29,7 +30,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro aperiam sunt quo similique,
                         dolorum consectetur inventore ipsam, officiis neque natus eius harum alias quidem. Possimus
                         nobis in inventore tenetur asperiores.</p>
-                    <a href="#" class="btn btn-primary">reservar ingresso</a>
+                    <a href="#" class="open-modal btn btn-primary">reservar ingresso</a>
                 </article>
                 <article class="evento card p-5 m-3">
                     <h2>nome do evento - 05/03/2022</h2>
@@ -37,7 +38,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro aperiam sunt quo similique,
                         dolorum consectetur inventore ipsam, officiis neque natus eius harum alias quidem. Possimus
                         nobis in inventore tenetur asperiores.</p>
-                    <a href="#" class="btn btn-primary">reservar ingresso</a>
+                    <a href="#" class="open-modal btn btn-primary">reservar ingresso</a>
                 </article>
                 <article class="evento card p-5 m-3">
                     <h2>nome do evento - 05/03/2022</h2>
@@ -45,7 +46,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro aperiam sunt quo similique,
                         dolorum consectetur inventore ipsam, officiis neque natus eius harum alias quidem. Possimus
                         nobis in inventore tenetur asperiores.</p>
-                    <a href="#" class="btn btn-primary">reservar ingresso</a>
+                    <a href="#" class="open-modal btn btn-primary">reservar ingresso</a>
                 </article>
                 <article class="evento card p-5 m-3">
                     <h2>nome do evento - 05/03/2022</h2>
@@ -53,7 +54,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro aperiam sunt quo similique,
                         dolorum consectetur inventore ipsam, officiis neque natus eius harum alias quidem. Possimus
                         nobis in inventore tenetur asperiores.</p>
-                    <a href="#" class="btn btn-primary">reservar ingresso</a>
+                    <a href="#" class="open-modal btn btn-primary">reservar ingresso</a>
                 </article>
                 <article class="evento card p-5 m-3">
                     <h2>nome do evento - 05/03/2022</h2>
@@ -61,7 +62,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro aperiam sunt quo similique,
                         dolorum consectetur inventore ipsam, officiis neque natus eius harum alias quidem. Possimus
                         nobis in inventore tenetur asperiores.</p>
-                    <a href="#" class="btn btn-primary">reservar ingresso</a>
+                    <a href="#" class="open-modal btn btn-primary">reservar ingresso</a>
                 </article>
                 <article class="evento card p-5 m-3">
                     <h2>nome do evento - 05/03/2022</h2>
@@ -69,7 +70,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro aperiam sunt quo similique,
                         dolorum consectetur inventore ipsam, officiis neque natus eius harum alias quidem. Possimus
                         nobis in inventore tenetur asperiores.</p>
-                    <a href="#" class="btn btn-primary">reservar ingresso</a>
+                    <a href="#" class="open-modal btn btn-primary">reservar ingresso</a>
                 </article>
             </div>
         </section>
@@ -121,6 +122,49 @@
         </nav>
     </div>
 </footer>
+
+<div id="modal">
+    <div class="modal-container">
+        <header id="modal-header">
+            <h2>Reserva de Ingressos</h2>
+            <span id="btn-close">&times;</span>
+        </header>
+        <form id="modal-form">
+            <div class="input-box">
+                <label for="nome" class="details">Nome Completo:</span>
+                <input type="text" class="form-field form-input" name="nome" id="form-nome" required>
+            </div>
+            <div class="input-box">
+                <label for="email" class="details">E-mail:</span>
+                <input type="email" class="form-field form-input" name="email" id="form-email" required>
+            </div>
+            <div class="input-box">
+                <label for="documento" class="details">CPF/RG:</span>
+                <input type="text" class="form-field form-input" name="documento" id="form-documento">
+            </div>
+            <div class="input-box">
+                <label for="telefone" class="details">Telefone:</span>
+                <input type="tel" class="form-field form-input" name="telefone" id="form-telefone">
+            </div>
+            <div class="input-box">
+                <label for="ingressos" class="details">Quantidade de Ingressos:</span>
+                <select class="form-field form-select" id="form-ingressos" name="ingressos">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+        </form>
+        <footer id="modal-footer">
+            <button id="btn-cancel" class="btn-modal btn-cancel">Cancelar</button>
+            <button type="submit" id="btn-confirm" class="btn-modal btn-confirm" form="modal-form">Reservar Ingresso(s)</button>
+        </footer>
+    </div>
+</div>
+
+    <script src="js/eventos.js"></script>
 </body>
 
 </html>
