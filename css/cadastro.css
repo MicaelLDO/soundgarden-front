@@ -1,0 +1,10 @@
+.col-9 {
+    padding: 3rem;
+}
+
+@media (max-width: 1000px) {
+    .col-9 {
+        padding: 5%;
+        width: 100%;
+    }
+}

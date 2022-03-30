@@ -8,14 +8,16 @@ function showEvents(events) {
         const date = new Date(element.scheduled)
 
         list.innerHTML = list.innerHTML + `<tr>
-        <th scope="row">${index+1}</th>
-        <td>${date.toLocaleString('pt-BR')}</td>
+
+        <th class='remove' scope="row">${index+1}</th>
+        <td class='remove'>${date.toLocaleString('pt-BR')}</td>
         <td>${element.name}</td>
-        <td>${element.attractions}</td>
+        <td class='remove'>${element.attractions}</td>
         <td>
-            <a href="reservas.html" class="btn btn-dark">ver reservas</a>
-            <a href="editar-evento.html?id=${element._id}" class="btn btn-secondary">editar</a>
-            <a href="excluir-evento.html?id=${element._id}" class="btn btn-danger">excluir</a>
+            <a href="reservas.html" class="btn btn-dark w-100">ver reservas</a>
+            <a href="editar-evento.html?id=${element._id}" class="btn btn-secondary w-100">editar</a>
+            <a href="excluir-evento.html?id=${element._id}" class="btn btn-danger w-100">excluir</a>
+
         </td>
         </tr>`
 
