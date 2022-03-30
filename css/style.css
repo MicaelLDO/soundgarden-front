@@ -59,6 +59,7 @@ footer nav ul li  {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 
@@ -85,4 +86,43 @@ footer nav ul li  {
         min-height: auto;
     }
     
+}
+
+
+/* Carrossel */
+
+.carousel-article {
+    background-color: #808080;
+    background-image: url(../img/articles-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    max-width: 750px;
+    color: #FAFAFA;
+    text-shadow: 1px 1px 1px rgba(0, 0 , 0, .3);
+    position: relative;
+}
+
+.carousel-article h2 {
+    font-size: 2.5rem;
+}
+
+.carousel-article h3 {
+    font-size: 1.2rem;
+}
+
+.carousel-article h4 {
+    font-size: 1.5rem;
+}
+
+.carousel-footer {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+.carousel-article p {
+    font-size: 1rem;
 }
