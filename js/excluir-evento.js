@@ -20,7 +20,7 @@ form.onsubmit = async function() {
         
         const request = await fetch('https://xp41-soundgarden-api.herokuapp.com/events/' + findId(), options)
         alert('Deletado com sucesso!')
-        window.location.pathname = "/admin.html"
+        window.location.pathname = "/soundgarden-front/admin.html"
         
     } catch (error) {
         alert('Ocorreu um erro inesperado')
