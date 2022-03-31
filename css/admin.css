@@ -51,6 +51,10 @@ footer nav ul li {
   padding: 10px;
 }
 
+#lista-eventos{
+  width: 82%
+}
+
 @media (max-width: 1000px) {
   body header {
     display: flex;
@@ -68,5 +72,8 @@ footer nav ul li {
   aside {
       display: none;
   }
+  #lista-eventos{
+  width: 82%
+}
   
 }
