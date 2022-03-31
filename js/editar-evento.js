@@ -57,7 +57,7 @@ form.onsubmit = async function(){
 
 
         alert('Dado atualizado com sucesso!')
-        window.location.pathname = "/admin.html"
+        window.location.pathname = "/soundgarden-front/admin.html"
     } catch (error) {
         debugger 
         console.error(error)
