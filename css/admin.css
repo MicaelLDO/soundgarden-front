@@ -52,7 +52,7 @@ footer nav ul li {
 }
 
 #lista-eventos{
-  width: 82%
+  width: 82%;
 }
 
 @media (max-width: 1000px) {
@@ -73,7 +73,7 @@ footer nav ul li {
       display: none;
   }
   #lista-eventos{
-  width: 82%
+  width: 100%;
 }
   
 }
