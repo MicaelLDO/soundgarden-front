@@ -41,6 +41,7 @@ form.onsubmit = async (evento) => {
     const conteudoResposta = await resposta.json();
     alert('Evento cadastrado com sucesso!')
     form.reset();
+    window.location.pathname = "/soundgarden-front/admin.html"
   
   } catch (error) {
     alert('Erro inesperado');
