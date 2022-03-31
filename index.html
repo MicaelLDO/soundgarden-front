@@ -14,65 +14,78 @@
 
 <body>
     <header class=" d-flex justify-content-center align-items-center">
-        <img src="img/Sound-logo (1).png" width="300" alt="logo sound garden">
+        <a href="index.html">
+            <img src="img/Sound-logo (1).png" width="300" alt="logo sound garden">
+        </a>
     </header>
     <main>
-        <section class="full d-flex justify-content-center align-items-center"
-            style="background-color: #F8BBD0; color: #fff">
-            <div class="text-center">
-                <h1>Adicione um banner maneiro aqui</h1>
+        <div id="carousel-banner" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carousel-banner" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carousel-banner" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carousel-banner" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
-        </section>
+            <div class="carousel-inner">
+              <div id="first-slide" class="banner-slide carousel-item active">
+                <div class="carousel-caption">
+                  <h2>Groovy Grind Night</h2>
+                  <p>10 de Dezembro, 2022 - 21hrs</p>
+                </div>
+              </div>
+              <div id="second-slide" class="banner-slide carousel-item">
+                <div class="carousel-caption">
+                  <h2>Indie Legion Fest</h2>
+                  <p>22 de Janeiro, 2023 - 22hrs</p>
+                </div>
+              </div>
+              <div id="third-slide" class="banner-slide carousel-item">
+                <div class="carousel-caption">
+                  <h2>Underground Kings</h2>
+                  <p>25 de Junho, 2023 - 20hrs</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-banner" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel-banner" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
         <section class="full">
             <div class="container text-center">
                 <h2>Próximos eventos</h2>
             </div>
 
-            <div id="carousel-evento" class="carousel slide carousel-fade" data-bs-ride="carousel" style="max-width: 700px; max-height: 400px; margin:0 auto;">
-            <div class="carousel-inner container container-fluid text-center">
-                <article class="carousel-article carousel-item active">
-                    <h2 class="pt-4">nome do evento</h2>
-                    <h3>Data:</h3>
-                    <h4 class="pt-4 ">Arctic Monkeys, The Kooks, Hiatus Kaiyote</h4>
-                    <p class="py-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro aperiam sunt quo similique,
-                        dolorum consectetur inventore ipsam, officiis neque natus eius harum alias quidem. Possimus
-                        nobis in inventore tenetur asperiores.</p>
-                    <div class="carousel-footer">
-                        <a href="#modal" class="open-modal btn btn-primary">reservar ingresso</a>
-                    </div>
-                </article>
-                <article class="carousel-article carousel-item">
-                    <h2 class="pt-4">nome do evento</h2>
-                    <h3>Data:</h3>
-                    <h4 class="pt-4">Arctic Monkeys, The Kooks, Hiatus Kaiyote</h4>
-                    <p class="py-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro aperiam sunt quo similique,
-                        dolorum consectetur inventore ipsam, officiis neque natus eius harum alias quidem. Possimus
-                        nobis in inventore tenetur asperiores.</p>
-                    <div class="carousel-footer">
-                    <a href="#modal" class="open-modal btn btn-primary">reservar ingresso</a>
-                    </div>
-                </article>
-                <article class="carousel-article carousel-item">
-                    <h2 class="pt-4">nome do evento</h2>
-                    <h3>Data:</h3>
-                    <h4 class="pt-4">Arctic Monkeys, The Kooks, Hiatus Kaiyote</h4>
-                    <p class="py-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro aperiam sunt quo similique,
-                        dolorum consectetur inventore ipsam, officiis neque natus eius harum alias quidem. Possimus
-                        nobis in inventore tenetur asperiores.</p>
-                    <div class="carousel-footer">    
-                        <a href="#modal" class="open-modal btn btn-primary">reservar ingresso</a>
-                    </div>
-                </article>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-evento" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carousel-evento" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
+        <div class="container-evento">
+            <article class="evento card p-5 m-3">
+                <h2>nome do evento - 05/03/2022</h2>
+                <h4>Arctic Monkeys, The Kooks, Hiatus Kaiyote</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro aperiam sunt quo similique,
+                    dolorum consectetur inventore ipsam, officiis neque natus eius harum alias quidem. Possimus
+                    nobis in inventore tenetur asperiores.</p>
+                <a href="#modal" class="open-modal btn btn-primary">reservar ingresso</a>
+            </article>
+            <article class="evento card p-5 m-3">
+                <h2>nome do evento - 05/03/2022</h2>
+                <h4>Arctic Monkeys, The Kooks, Hiatus Kaiyote</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro aperiam sunt quo similique,
+                    dolorum consectetur inventore ipsam, officiis neque natus eius harum alias quidem. Possimus
+                    nobis in inventore tenetur asperiores.</p>
+                <a href="#modal" class="open-modal btn btn-primary">reservar ingresso</a>
+            </article>
+            <article class="evento card p-5 m-3">
+                <h2>nome do evento - 05/03/2022</h2>
+                <h4>Arctic Monkeys, The Kooks, Hiatus Kaiyote</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro aperiam sunt quo similique,
+                    dolorum consectetur inventore ipsam, officiis neque natus eius harum alias quidem. Possimus
+                    nobis in inventore tenetur asperiores.</p>
+                <a href="#modal" class="open-modal btn btn-primary">reservar ingresso</a>
+            </article>
         </div>
+
 
             <div class="container text-center pt-5">
                 <a href="eventos.html" class="btn btn-secondary">ver todos os eventos</a>
@@ -112,7 +125,7 @@
     
     <footer>
         <div class="container-footer">
-            <a href="#">
+            <a href="index.html">
                 <img src="img/Sound-logo-black (1).png" width="200px" alt="logo sound garden">
             </a>
             <nav>

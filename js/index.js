@@ -41,8 +41,7 @@ function eventsArticles(events) {
     for (let i = 0; i < 3; i++) {
         let eventoData = new Date(events[i].scheduled).toLocaleString('pt-BR', dateOptions);
 
-        getArticles[i].querySelector('h2').innerText = `${events[i].name}`;
-        getArticles[i].querySelector('h3').innerText = `${eventoData}`;
+        getArticles[i].querySelector('h2').innerText = `${events[i].name} - ${eventoData}`;
         getArticles[i].querySelector('h4').innerText = `${events[i].attractions}`;
         getArticles[i].querySelector('p').innerText = `${events[i].description}`;
         getArticles[i].querySelector('a').href = `#modal?id=${events[i]._id}`;
